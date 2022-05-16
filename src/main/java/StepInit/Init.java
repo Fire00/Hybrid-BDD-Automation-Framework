@@ -39,7 +39,7 @@ public class Init {
         Init.scenario=scenario;
         pageObjectManger=new PageObjectManger(session,scenario);
         pageObjectManger.initPageObjects();
-        reporter=new SparkReporter(scenario);
+        reporter=new SparkReporter(scenario,configuration.config);
     }
 
     /**

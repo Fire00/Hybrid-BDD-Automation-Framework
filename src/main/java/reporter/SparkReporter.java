@@ -6,6 +6,8 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import io.cucumber.java.Scenario;
 
+import java.util.HashMap;
+
 public class SparkReporter {
 
     /**
@@ -25,9 +27,9 @@ public class SparkReporter {
      *
      * @author Siddhartha Pandey (pandeysiddhartha007@gmail.com)
      */
-    public SparkReporter(Scenario scenario)
+    public SparkReporter(Scenario scenario, HashMap<String,String> config)
     {
-        initReporter(scenario);
+        initReporter(scenario,config);
     }
 
     /**
@@ -38,13 +40,16 @@ public class SparkReporter {
      * @author Siddhartha Pandey (pandeysiddhartha007@gmail.com)
      */
 
-    public void  initReporter(Scenario scenario) {
+    public void  initReporter(Scenario scenario,HashMap<String,String> config) {
         extent = new ExtentReports();
         ExtentSparkReporter spark = new ExtentSparkReporter(System.getProperty("user.dir") + "//target//Extent-Report//" + scenario.getName() + ".html");
         spark.config().setTheme(Theme.DARK);
         spark.config().setDocumentTitle(scenario.getName() + " Report");
         extent.attachReporter(spark);
         report = extent.createTest(scenario.getName());
+        report.info("Browser: "+config.get("Browser"));
+        report.info("URL: "+config.get("url"));
+
     }
 
 
