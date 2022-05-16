@@ -2,7 +2,7 @@
 
 Feature: HealthGraph QA Automation Assignment
 
-  @UI
+  @UI @NoBroker
   Scenario: Verify search functionality for the multiple locality and description tag for the property
     Given User Opened "NOBROKER" site
     Then I select "Mumbai" city from the drop down
