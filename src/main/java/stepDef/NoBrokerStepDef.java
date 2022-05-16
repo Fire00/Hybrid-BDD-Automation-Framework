@@ -41,7 +41,7 @@ public class NoBrokerStepDef {
     }
 
     @Then("I select {string} and {string} in apartment Type DropDown")
-    public void iSelectInAprtmentTypeDropDown(String aptType1, String aptType2) {
+    public void iSelectInAprtmentTypeDropDown(String aptType1, String aptType2) throws InterruptedException {
         noBroker.iSelectInAprtmentTypeDropDown(aptType1, aptType2);
     }
 

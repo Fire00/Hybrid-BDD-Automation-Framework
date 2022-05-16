@@ -97,12 +97,13 @@ public class NoBroker implements NoBrokerXPaths {
         System.out.println(data);
 
         for (String str : data.values()) {
+            Thread.sleep(4000);
             WebElement search = driver.findElement(By.xpath(searchArea));
             search.click();
             search.sendKeys(str);
-            Thread.sleep(1000);
+            Thread.sleep(4000);
             search.sendKeys(Keys.ARROW_DOWN);
-            Thread.sleep(1000);
+            Thread.sleep(4000);
             search.sendKeys(Keys.ENTER);
             session.iWaitForElementToload(2);
             reporter.report.info("Entered "+str+" in Search bar");
@@ -119,7 +120,8 @@ public class NoBroker implements NoBrokerXPaths {
      * @author Siddhartha Pandey (pandeysiddhartha007@gmail.com)
      */
 
-    public void iSelectInAprtmentTypeDropDown(String aptType1, String aptType2) {
+    public void iSelectInAprtmentTypeDropDown(String aptType1, String aptType2) throws InterruptedException {
+            Thread.sleep(4000);
             session.iWaitForElementToload(4);
             session.clickVisibleElement(By.xpath(aptDropDown), 30);
             session.clickVisibleElement(By.xpath(aptSuggetions.replaceAll("&aptType", aptType1)), 30);
@@ -150,6 +152,8 @@ public class NoBroker implements NoBrokerXPaths {
      * @author Siddhartha Pandey (pandeysiddhartha007@gmail.com)
      */
     public void iScrollDownToSearchResultAndSelectIt(String ind) throws InterruptedException {
+        Thread.sleep(4000);
+        session.waitForpageToLoad();
         session.iWaitForElementToload(4);
         session.waitForVisibilityOfElements(By.xpath(searchResults.replaceAll("&ind", ind)),30);
         session.scrollToElement(By.xpath(searchResults.replaceAll("&ind", ind)));
