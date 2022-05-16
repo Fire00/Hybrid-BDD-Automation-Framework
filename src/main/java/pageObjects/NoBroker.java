@@ -49,6 +49,7 @@ public class NoBroker implements NoBrokerXPaths {
      * @author Siddhartha Pandey (pandeysiddhartha007@gmail.com)
      */
     public void userOpenedSiteAndSelectedOption(String website) {
+        session.iWaitForElementToload(4);
         session.waitForVisibilityOfElements(By.xpath(NoBrokerHomePage), 60);
         reporter.report.info("Website Opened"+website);
 
@@ -62,6 +63,7 @@ public class NoBroker implements NoBrokerXPaths {
      * @author Siddhartha Pandey (pandeysiddhartha007@gmail.com)
      */
     public void iSelectCityFromTheDropDown(String city) throws InterruptedException {
+        session.iWaitForElementToload(4);
         session.clickVisibleElement(By.xpath(searchCity), 30);
         session.clickVisibleElement(By.xpath(selectCityInDropDown.replaceAll("&city", city)), 60);
         reporter.report.info("Selected "+city+" city from the drop down");
@@ -76,6 +78,7 @@ public class NoBroker implements NoBrokerXPaths {
      */
 
     public void iSelectOption(String opt) {
+        session.iWaitForElementToload(4);
         session.clickVisibleElement(By.xpath(Buy.replaceAll("&opt",opt)), 30);
         reporter.report.info("Selected "+opt+" Option");
     }
@@ -89,7 +92,7 @@ public class NoBroker implements NoBrokerXPaths {
      * @author Siddhartha Pandey (pandeysiddhartha007@gmail.com)
      */
     public void iEnterInTheSearchBar(String area, DataTable areaList) throws InterruptedException {
-
+        session.iWaitForElementToload(4);
         Map<String, String> data = areaList.asMap(String.class, String.class);
         System.out.println(data);
 
@@ -117,6 +120,7 @@ public class NoBroker implements NoBrokerXPaths {
      */
 
     public void iSelectInAprtmentTypeDropDown(String aptType1, String aptType2) {
+            session.iWaitForElementToload(4);
             session.clickVisibleElement(By.xpath(aptDropDown), 30);
             session.clickVisibleElement(By.xpath(aptSuggetions.replaceAll("&aptType", aptType1)), 30);
             session.clickVisibleElement(By.xpath(aptSuggetions.replaceAll("&aptType", aptType2)), 30);
@@ -132,6 +136,7 @@ public class NoBroker implements NoBrokerXPaths {
      */
 
     public void iClickOnButton(String button) throws InterruptedException {
+        session.iWaitForElementToload(4);
         session.clickVisibleElement(By.xpath(searchButton), 30);
         reporter.report.info("Clicked of "+button+" button");
 
@@ -160,6 +165,7 @@ public class NoBroker implements NoBrokerXPaths {
      * @author Siddhartha Pandey (pandeysiddhartha007@gmail.com)
      */
     public void iValidateIfDescriptionSectionIsAvailable() throws InterruptedException {
+        session.iWaitForElementToload(4);
         for (String handle : driver.getWindowHandles()) {
             if (!(handle.equals(driver.getWindowHandle()))) {
                 driver.switchTo().window(handle);
