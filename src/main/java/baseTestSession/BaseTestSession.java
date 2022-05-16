@@ -3,6 +3,7 @@ import io.cucumber.java.Scenario;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -202,4 +203,20 @@ public class BaseTestSession {
     public  void iWaitForElementToload(int time){
         driver.manage().timeouts().implicitlyWait(time, TimeUnit.SECONDS);
     }
+
+    /**
+     * This function is waits until element is visible, and then it performs click operation through JS on it.
+     *
+     * @param xpath xpath of the element
+     * @param time time in seconds until for which user wants to wait for the element to be visible
+     *
+     * @author Siddhartha Pandey (pandeysiddhartha007@gmail.com)
+     */
+    public void clickVisibleElementThroughJS(By xpath)
+    {
+        WebElement element = driver.findElement(xpath);
+        JavascriptExecutor executor = (JavascriptExecutor)driver;
+        executor.executeScript("arguments[0].click();", element);
+    }
+
 }

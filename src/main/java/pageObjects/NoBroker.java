@@ -157,7 +157,7 @@ public class NoBroker implements NoBrokerXPaths {
         session.iWaitForElementToload(4);
         session.waitForVisibilityOfElements(By.xpath(searchResults.replaceAll("&ind", ind)),30);
         session.scrollToElement(By.xpath(searchResults.replaceAll("&ind", ind)));
-        session.clickVisibleElement(By.xpath(searchResults.replaceAll("&ind", ind)), 30);
+        session.clickVisibleElementThroughJS(By.xpath(searchResults.replaceAll("&ind", ind)));
         reporter.report.info("Scrolled to the "+ind+"th result after search and clicked on it");
     }
 
