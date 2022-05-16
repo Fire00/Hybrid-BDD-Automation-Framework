@@ -121,6 +121,12 @@ NoBroker-automation-Framework
     - If you need to execute the whole feature. Right-Click and Select Run Feature
     - If you need to execute the Scenario. Right-Click and Select Run Scenario
 
+2. With TestRunner.java `src/test/java/TestRunner.java` `Recommended`
+    - If Executing with @Tags
+        - Open TestRunner file
+        - Specify tags under tags={""}
+        - Run the java file
+   
 ------
 
 ## Post Execution
