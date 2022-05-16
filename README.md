@@ -115,20 +115,11 @@ NoBroker-automation-Framework
 
 ### How to Execute, different types
 
-1. As Cucumber Feature/Scenario `Use during debugging/development`
+1. As Cucumber Feature/Scenario `Recommended` `Use during debugging/development`
     - Open project in IntelliJ
     - Open the cucumber feature
     - If you need to execute the whole feature. Right-Click and Select Run Feature
     - If you need to execute the Scenario. Right-Click and Select Run Scenario
-
-2. With Maven (Maven -> TestNG -> Cucumber Feature) `Recommended`
-       - If Execution with IntelliJ,
-        - Open the project in IntelliJ
-        - Click on Add Configurations (if not already added)
-        - Select Maven, and specify command **`clean verify @TAGEXPRESSION`**
-        - Click apply & OK
-        - Click on the Run Button
-
 
 ------
 
