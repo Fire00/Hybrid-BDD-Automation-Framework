@@ -1,4 +1,4 @@
-# Welcome to M.O.M Automation!
+# Welcome to NoBroker Automation Framework
 
 - **Git Clone URL** : https://github.com/Fire00/NoBroker-automation-Framework.git
 - **Maintained / Developed By** : [Siddhartha Pandey](pandeysiddhartha007@gmail.com)
@@ -121,6 +121,12 @@ NoBroker-automation-Framework
     - If you need to execute the whole feature. Right-Click and Select Run Feature
     - If you need to execute the Scenario. Right-Click and Select Run Scenario
 
+2. With TestRunner.java `src/test/java/TestRunner.java` `Recommended`
+    - If Executing with @Tags
+        - Open TestRunner file
+        - Specify tags under tags={""}
+        - Run the java file
+   
 ------
 
 ## Post Execution
