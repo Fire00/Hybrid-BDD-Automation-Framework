@@ -1,0 +1,7 @@
+#This file contains the Browser information and Url of the website.
+
+#This is the First file to be read
+
+TestRun:
+  browser: chrome
+  url: https://www.nobroker.in/
