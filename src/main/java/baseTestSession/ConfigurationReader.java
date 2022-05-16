@@ -1,4 +1,4 @@
-package BaseTestSession;
+package baseTestSession;
 
 import org.yaml.snakeyaml.Yaml;
 

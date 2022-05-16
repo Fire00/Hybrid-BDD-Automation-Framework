@@ -1,6 +1,6 @@
 package StepInit;
 
-import BaseTestSession.BaseTestSession;
+import baseTestSession.BaseTestSession;
 import io.cucumber.java.Scenario;
 import pageObjects.NoBroker;
 

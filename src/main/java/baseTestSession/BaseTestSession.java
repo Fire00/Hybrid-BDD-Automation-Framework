@@ -1,4 +1,4 @@
-package BaseTestSession;
+package baseTestSession;
 import io.cucumber.java.Scenario;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;

@@ -1,7 +1,7 @@
 package pageObjects;
 
-import BaseTestSession.BaseTestSession;
-import Specs.NoBrokerXPaths;
+import baseTestSession.BaseTestSession;
+import specs.NoBrokerXPaths;
 import io.cucumber.datatable.DataTable;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;

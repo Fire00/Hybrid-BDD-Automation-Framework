@@ -1,4 +1,4 @@
-package Specs;
+package specs;
 
 public interface NoBrokerXPaths {
 
